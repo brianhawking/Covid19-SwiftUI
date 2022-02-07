@@ -106,13 +106,11 @@
 		F72A817227AF2C9600F63EE9 /* CovidContactTracing-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F73FAA5127B16B6C00503D07 /* Views */,
 				F73E85E427B037FE00621DD1 /* Extensions */,
 				F73E85E127B0376900621DD1 /* Models */,
 				F73E85DE27B0372100621DD1 /* CustomViews */,
 				F72A817327AF2C9600F63EE9 /* CovidContactTracing_SwiftUIApp.swift */,
-				F72A817527AF2C9600F63EE9 /* ContentView.swift */,
-				F73E85EA27B0710F00621DD1 /* HomeView.swift */,
-				F73E85DC27B036C200621DD1 /* ThankYouView.swift */,
 				F72A817727AF2C9900F63EE9 /* Assets.xcassets */,
 				F72A817927AF2C9900F63EE9 /* Preview Content */,
 			);
@@ -166,6 +164,16 @@
 				F73E85E527B0380800621DD1 /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F73FAA5127B16B6C00503D07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F72A817527AF2C9600F63EE9 /* ContentView.swift */,
+				F73E85EA27B0710F00621DD1 /* HomeView.swift */,
+				F73E85DC27B036C200621DD1 /* ThankYouView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

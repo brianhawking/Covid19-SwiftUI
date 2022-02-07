@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State var wifiOn: Bool = true
+    @State var covidPositive: Bool = false
+    
     var body: some View {
         
         NavigationView {
-            
             
             ZStack {
                 Color.backgroundColor
@@ -34,12 +37,31 @@ struct HomeView: View {
                         .shadow(radius: 5)
                     }.padding()
                     
+                    VStack(alignment: .center) {
+                        Toggle(isOn: $wifiOn) {
+                            Image(systemName: "wifi")
+                        }
+                        Toggle(isOn: $covidPositive) {
+                            Text("Covid +")
+                        }
+                    }
+                    .frame(width: 140, alignment: .center)
+                    
                     Spacer()
                     
-                    Image("map")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 400, height: 300, alignment: .center)
+                    switch wifiOn {
+                    case true:
+                        Image("map")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 400, height: 200, alignment: .center)
+                    default:
+                        Image("covid-19")
+                            .resizable()
+                            .frame(width: 100, height: 100, alignment: .center)
+                    }
+                    
+                    
                 }
                 
                     
